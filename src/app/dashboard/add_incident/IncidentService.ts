@@ -25,4 +25,8 @@ export class IncidentService {
   addincident(incident: any): Observable<any> {
     return this.http.post<any>(this.baseUrl + 'add-incident', incident);
   }
+
+  getRiskCategories(): Observable<any[]> {
+    return this.http.get<any[]>(this.baseUrl + 'get-all-riskcategory/all');
+  }
 }

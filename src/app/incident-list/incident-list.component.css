@@ -11,3 +11,97 @@
 }
 
 
+.modale {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+/* Target edit button */
+.btn-warning.btn-sm {
+  background-color: #ffc107; /* Orange color */
+  color: #fff; /* White text */
+  border-radius: 5px; /* Rounded corners */
+  padding: 5px 10px; /* Adjust padding as needed */
+  transition: all 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+/* Target edit button on hover */
+.btn-warning.btn-sm:hover {
+  background-color: #ff9800; /* Slightly darker orange on hover */
+}
+
+/* Target delete button */
+.btn-danger.btn-sm {
+  background-color: #dc3545; /* Red color */
+  color: #fff; /* White text */
+  border-radius: 5px; /* Rounded corners */
+  padding: 5px 10px; /* Adjust padding as needed */
+  transition: all 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+/* Target delete button on hover */
+.btn-danger.btn-sm:hover {
+  background-color: #c82333; /* Slightly darker red on hover */
+}
+
+.modale .modale-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 4px;
+    width: 50%; /* Adjust as needed */
+    max-width: 500px; /* Adjust as needed */
+}
+
+.closee {
+  color: white;
+  background-color: red;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  float: right;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+/* Paginator styling */
+.mat-paginator {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem;
+}
+
+.mat-paginator .mat-paginator-range-label {
+  margin: 0 1rem;
+}
+/* Target the table header row */
+.table thead tr {
+  background-color: #ddd; /* Light gray background for headers */
+}
+
+/* Target table header cells */
+.table thead th {
+  /* Inherit background color from the row */
+  /* Optional: Add a border to separate headers */
+  border-bottom: 1px solid #ddd;
+  padding: 10px; /* Add some padding for readability */
+}
+
+/* Optionally rotate long headers for smaller screens */
+@media (max-width: 768px) {
+  .table thead th:nth-child(2),
+  .table thead th:nth-child(3),
+  .table thead th:nth-child(4) {
+    transform: rotate(-90deg);
+  }
+}

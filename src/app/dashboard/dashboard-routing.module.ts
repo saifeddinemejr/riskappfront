@@ -8,7 +8,7 @@ import {IncidentListComponent} from "../incident-list/incident-list.component";
 const routes: Routes = [
   {path:'',component:DashComponent},
   {path:'ajouter',component:AddincidentComponent},
-  {path:'incidentlist',component:IncidentListComponent}
+  {path:'incidentlist',component:IncidentListComponent},
 ];
 
 @NgModule({

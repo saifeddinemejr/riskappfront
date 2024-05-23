@@ -5,6 +5,7 @@ import { AddincidentComponent } from './add_incident/addincident.component';
 import { FormsModule } from '@angular/forms';
 import {CommonModule} from "@angular/common";
 import {IncidentListComponent} from "../incident-list/incident-list.component";
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
@@ -15,8 +16,9 @@ import {IncidentListComponent} from "../incident-list/incident-list.component";
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
-    , FormsModule]
+    DashboardRoutingModule, 
+    FormsModule,
+    MatPaginatorModule,]
 })
 export class DashboardModule {
 

@@ -5,21 +5,27 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class incident_listService {
-  private url='http://localhost:8089/riskmanagement/'
-  constructor(private http:HttpClient) { }
-  getAllincidents(){
-    return this.http.get(this.url+'get-all-incidents');
+  private url = 'http://localhost:8089/riskmanagement/';
+
+  constructor(private http: HttpClient) { }
+
+  getAllIncidents() {
+    return this.http.get(this.url + 'get-all-incidents');
   }
-  addIncident(incident:any){
-    return this.http.post(this.url+'add-incident',incident);
+
+  addIncident(incident: any) {
+    return this.http.post(this.url + 'add-incident', incident);
   }
-  updateIncident(id:number,incident:any){
-    return this.http.put(this.url+'update-incident'+id,incident);
+
+  updateIncident(id: number, incident: any) {
+    return this.http.put(this.url + 'update-incident/' + id, incident);
   }
-  deleteincident(id:number){
-    return this.http.delete(this.url+'delete-incident/'+id)
+
+  delIncident(id: any) {
+    return this.http.delete(this.url + 'delete-incident/' + id);
   }
-  getIncidentById(id:number){
-    return this.http.get(this.url+"get-incident-by-id"+id)
+
+  getIncidentById(id: number) {
+    return this.http.get(this.url + 'get-incident-by-id/' + id);
   }
 }
