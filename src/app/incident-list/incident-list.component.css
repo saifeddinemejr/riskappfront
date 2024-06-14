@@ -48,7 +48,7 @@
 
 /* Target delete button on hover */
 .btn-danger.btn-sm:hover {
-  background-color: #c82333; /* Slightly darker red on hover */
+  background-color: #b43946; /* Slightly darker red on hover */
 }
 
 .modale .modale-content {
@@ -62,7 +62,7 @@
 
 .closee {
   color: white;
-  background-color: red;
+  background-color: rgba(206, 15, 15, 0.776);
   font-size: 20px;
   border: none;
   cursor: pointer;

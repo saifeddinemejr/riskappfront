@@ -3,18 +3,21 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { incident_listService } from "./incident-listService";
 import { PageEvent } from '@angular/material/paginator';
 
+
 @Component({
   selector: 'app-incident-list',
   templateUrl: './incident-list.component.html',
   styleUrls: ['./incident-list.component.css']
 })
 export class IncidentListComponent implements OnInit {
+  incidents: any[] = [];
   idToDelete!: number;
   incident_list: any[] = [];
   isDeleteModalOpen = false;
   paginatedIncidents: any[] = [];
   pageSize: number = 5;
   currentPage: number = 0;
+  searchTerm: any;
 
   constructor(
     private router: Router, 
@@ -54,6 +57,16 @@ export class IncidentListComponent implements OnInit {
     this.pageSize = event.pageSize;
     this.currentPage = event.pageIndex;
     this.updatePaginatedIncidents();
+  }
+
+  onSearchChange() {
+    if (this.searchTerm) {
+      this.paginatedIncidents = this.incidents.filter(incident => 
+        incident.id.toString().includes(this.searchTerm)
+      );
+    } else {
+      this.updatePaginatedIncidents();
+    }
   }
 
   openDeleteConfirmationModal(id: number): void {

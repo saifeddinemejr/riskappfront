@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +26,7 @@ export class incident_listService {
     return this.http.delete(this.url + 'delete-incident/' + id);
   }
 
-  getIncidentById(id: number) {
-    return this.http.get(this.url + 'get-incident-by-id/' + id);
+  getIncidentById(id: number): Observable<any> {
+    return this.http.get<any>(this.url + 'get-incident-by-id/' + id);
   }
 }

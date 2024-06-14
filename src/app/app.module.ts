@@ -12,6 +12,7 @@ import {CommonModule} from "@angular/common";
 import { EditIncidentListComponent } from './edit-incident-list/edit-incident-list.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { incident_listService } from './incident-list/incident-listService';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatPaginatorModule,
     // NgbModule
   ],
-  providers: [],
+  providers: [incident_listService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

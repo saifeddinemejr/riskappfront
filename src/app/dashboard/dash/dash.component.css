@@ -1,7 +1,7 @@
 .icon-button {
   display: inline-flex;
   align-items: center;
-  padding:5px;
+  padding: 5px;
   background-color: #ffffff;
   color: #7c7979;
   border: none;
@@ -14,9 +14,10 @@
   margin-right: 10px; /* Espace entre l'icône et le texte */
 }
 
-label{
+label {
   margin-right: 85px; /* Espace entre le label et le bouton */
 }
+
 .search-bar {
   display: flex;
   align-items: center;
@@ -29,3 +30,29 @@ label{
   flex: 1;
 }
 
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.intro p {
+  max-width: 800px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.images img {
+  width: 400px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
